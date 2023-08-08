@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocketry</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" media="screen and (max-width:1199px)" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body{
+        background-color: black;
+    }
+    /* css reset  */
+    * {
+        margin: 0;
+        padding: 0;
+     
+    }
+
+    /* CSS Variables  */
+    :root {
+        --navbar-height: 59px;
+    }
+
+    /* navigation bar  */
+
+
+    /*nav bar logo and image  */
+    #logo {
+        margin: 14px 24px;
+    }
+
+    #logo img {
+        height: 44px;
+        margin: 2px 1px;
+    }
+
+    /* nav bar list styling  */
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 65px;
+        /* background-color: rgb(27, 57, 148); */
+    }
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    #navbar ul li {
+        /* color: aquamarine; */
+        list-style: none;
+        font-size: 1.14rem;
+    }
+
+    #navbar ul li a {
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-family: 'Quicksand', sans-serif;
+        transition: all 0.5s ease-out;
+        text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: beige;
+        transform: scale(0.9);
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: rgb(2, 2, 2);
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.92;
+    }
+
+    /* home section  */
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 583px;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 3px 2px 2px rgb(79, 57, 57);
+        font-weight: bold;
+    }
+    #home::before {
+        content: "";
+        background: url('img/new.jpg') no-repeat center center/cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 660px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.6;
+    }
+
+    #home h1 {
+        color: white;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    #home p {
+        color: white;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        font-size:medium;
+    }
+
+    /* utility class */
+    .h-primary {
+        font-size: 2.8rem;
+        padding: 44px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .h-secondary {
+        font-size: 2.3rem;
+        padding: 44px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .btn {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: rgb(27, 57, 148);
+        color: aliceblue;
+        margin: 20px;
+        border-radius: 20px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.1rem;
+        transition: all 0.5s ease-out;
+    }
+
+    .btn:hover {
+        background-color: blanchedalmond;
+        color: black;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .center {
+        text-align: center;
+        padding: 18px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .center1 {
+        text-align: center;
+        padding: 8px;
+        font-family: 'Quicksand', sans-serif;
+        /* text-shadow: 2px 2px white; */
+        color: whitesmoke;
+    }
+
+    /* services section */
+    #services {
+        margin: 34px;
+        display: flex;
+        /* height: 475px; */
+
+    }
+    #services .box p {
+        font-family: 'Quicksand', sans-serif;
+
+    }
+    #services-container h1 {
+        color: azure;
+        text-shadow: 2px 2px 2px rgb(41, 26, 26);
+        background-color: rgb(9, 6, 11);
+    }
+    #services-container::before {
+        content: "";
+        /* background: url('img/back2.jpg') no-repeat center center/cover; */
+        position: absolute;
+        top: 650px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+    }
+    
+    #services #box1 {
+        border: 2px solid rgb(235, 224, 224);
+        padding: 40px;
+        margin: 3px 10px;
+        border-radius: 20px;
+        background: url('img/sol.png') no-repeat center center/cover;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: rgb(8, 8, 23);
+        font-weight: bolder;
+        text-shadow: 2px 2px 2px rgb(189, 172, 172);
+    }
+    #services #box2 {
+        border: 2px solid rgb(235, 224, 224);
+        padding: 40px;
+        margin: 3px 10px;
+        border-radius: 20px;
+        background: url('img/s5.jpg') no-repeat center center/cover;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: rgb(228, 236, 231);
+        font-weight: bold;
+        text-shadow: 2px 2px 2px rgb(41, 26, 26);
+    }
+
+    #services #box3 {
+        border: 2px solid rgb(235, 224, 224);
+        padding: 13px;
+        margin: 3px 10px;
+        border-radius: 20px;
+        background: url('img/elc.jpg') no-repeat center center/cover;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: white;
+        text-shadow: 2px 2px 2px rgb(79, 57, 57);
+        font-weight: bold;
+    }
+
+    #client-section {
+        color: beige;
+    }
+
+    #client-section::before {
+        content: "";
+        position: absolute;
+        background: url('img/back3.jpg') no-repeat center center/cover;
+        left: 0px;
+        width: 100%;
+        height: 300px;
+        z-index: -1;
+        opacity: 0.99;
+    }
+
+    #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .client-item {
+        padding: 25px;
+    }
+    #clients img {
+        height: 124px;
+    }
+    #contact {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        color: aliceblue;
+    }
+    #contact::before {
+        background: url('img/back2.jpg') no-repeat;
+        content: "";
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        height: 477px;
+        z-index: -1;
+        opacity: 0.92;
+    }
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding-bottom: 2px; */
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: aliceblue;
+        font-weight: bold;
+    }
+
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 20px;
+        font-size: 1.1rem;
+    }
+    #contact-box form {
+        width: 40%;
+    }
+    #contact-box label {
+        font-size: 1.3rem;
+    }
+</style>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="img/s9.jpg" alt="yo">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">
+                    Home
+                </a></li>
+            <li class="item"><a href="#services-container">
+                    Details
+                </a></li>
+            <li class="item"><a href="#client-section">
+                    Our Clients
+                </a></li>
+            <li class="item"><a href="#contact">
+                    Contact Us
+                </a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to the world of Rocket Engines</h1>
+        <br>
+        <br>
+        <p>A rocket engine uses stored rocket propellants as the reaction mass for forming a high-speed propulsive jet
+            of fluid, usually high-temperature gas. Rocket engines are reaction engines, producing thrust by ejecting
+            mass rearward, in accordance with Newton's third law. Most rocket engines use the combustion of reactive
+            chemicals to supply the necessary energy, but non-combusting forms such as cold gas thrusters and nuclear
+            thermal rockets also exist. Vehicles propelled by rocket engines are commonly called rockets.</p>
+        <br>
+        <br>
+        <br>
+        <a href="https://en.wikipedia.org/wiki/Rocket_engine" class="btn" target="_blank">Know more...</a>
+    </section>
+    <section id="services-container">
+        <br>
+        <h1 class="h-primary center"> Types of boosters and engines</h1>
+        <div id="services">
+            <div class="box" id="box1">
+                <!-- <img src="img/s4.jpg" alt=""> -->
+                <h2 class="h-secondary">Solid Rocket booster</h2>
+                <p>A solid rocket booster (SRB) is a large solid propellant motor used to provide thrust in spacecraft
+                    launches from initial launch through the first ascent. Many launch vehicles, including the Ariane 5,
+                    Atlas V,[1] SLS.</p>
+                <br>
+                <br>
+                <a href="https://en.wikipedia.org/wiki/Solid_rocket_booster" class="btn" target="_blank">Know
+                    more...</a>
+            </div>
+            <div class="box" id="box2">
+                <!-- <img src="img/s4.jpg" alt=""> -->
+                <h2 class="h-secondary">Liquid engines</h2>
+                <p>A liquid rocket booster (LRB) uses liquid fuel and oxidizer to give a liquid-propellant or hybrid
+                    rocket an extra boost at take-off, and/or increase the total payload that can be carried. </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://en.wikipedia.org/wiki/Liquid_rocket_booster" class="btn" target="_blank">Know
+                    more...</a>
+            </div>
+            <div class="box" id="box3">
+                <!-- <img src="img/s4.jpg" alt=""> -->
+                <br>
+                <br>
+                <h2 class="h-secondary">Ion Thruster</h2>
+                <p> Most thrusters ionize propellant by electron bombardment: a high-energy electron (negative charge)
+                    collides with a propellant atom (neutral charge), releasing electrons from the propellant atom and
+                    resulting in a positively charged ion</p>
+                <br>
+                <br>
+                <br>
+               
+               
+                <a href="https://en.wikipedia.org/wiki/Ion_thruster" class="btn" target="_blank">Know more...</a>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="img/fi1.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="img/fi2.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="img/fi3.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="img/fi4.webp" alt="Our Client">
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+       
+        <div id="contact-box">
+            
+            <form action="noaction.php">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                <!-- <div class="form-group">
+                    Name:<input type="text" name="Enter your name" id="">
+                </div> -->
+                <br>
+                <br>
+                <div>
+                    Name: <input type="text" name="myname" placeholder="  Enter your name">
+                </div>
+                <br>
+                <div>
+                    Email: <input type="email" name="enter your mail ID" placeholder="  Enter your mail-Id">
+                </div>
+                <br>
+                <div>
+                    Date Of Birth: <input type="date" name="" id="" placeholder=" Enter your date of birth">
+                </div>
+                <br>
+                <div>
+                    Enter your age: <input type="number" name="" id="" placeholder="  Enter your age">
+                </div>
+                <br>
+                <div>
+                    Gender:<br>Male <input type="radio" name="mygender" id="gen">
+                    Female <input type="radio" name="mygender" id="gen">
+                </div>
+                <br>
+                <button class="btn">Submit</button>
+            </fieldset>
+            </form>
+       
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div class="center1">
+            Copyright &copy; www.booster.com. All right reserve
+        </div>
+    </footer>
+</body>
+</html>

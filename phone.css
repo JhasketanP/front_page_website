@@ -1,0 +1,97 @@
+/* RESPONSIVE */
+body {
+    background-color: black;
+}
+fieldset{
+    padding: 0px 38px;
+    left: 0px;
+    top: 0px;
+}
+form{
+    /* border: 3px solid white; */
+    padding:0px 88px 0px 0px;
+    /* align-items: left; */
+    /* width: 90%; */
+}
+#services {
+    flex-direction: column;
+}
+
+#clients {
+    flex-wrap: wrap;
+}
+
+#clients img {
+    width: 90px;
+    padding: 0px;
+    height: auto;
+}
+#client-section::before {
+   
+    height: 400px;
+   
+}
+#contact-box {
+   
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#navbar {
+    flex-direction: column;
+    height: 125px;
+
+}
+
+#navbar ul li a {
+    font-size: 0.8rem;
+    padding: 3px 15px;
+    padding-bottom: 7px;
+}
+
+#home {
+    height: 670px;
+    padding: 3px 38px;
+}
+
+#home::before {
+    /* border: 2px solid red; */
+    height: 825px;
+}
+
+#home p {
+    font-size: 13px;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(106, 113, 111);
+    font-weight:bolder;
+}
+
+.h-primary {
+    font-size: 45px;
+}
+
+#services {
+    flex-direction: column;
+    
+}
+#services::before{
+    padding: 20px  ;
+    margin: 2px 2px ;
+}
+
+#service .box {
+    padding: 14px;
+    margin: 2px 0px;
+    margin-bottom: 20px;
+}
+
+.centre1 {
+    color: white;
+}
+#contact::before {
+   
+    height: 490px;
+   
+}
